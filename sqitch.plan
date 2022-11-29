@@ -4,3 +4,4 @@
 
 appschema 2022-11-29T12:20:51Z Ionut Cio <ionut@ionkom.com> # Add geonames schema
 add_postgis_ext 2022-11-29T13:20:42Z Ionut Cio <ionut@ionkom.com> # Add postgis extension
+add_tables 2022-11-29T13:47:35Z Ionut Cio <ionut@ionkom.com> # Add tables

@@ -85,16 +85,17 @@ CREATE TABLE geonames.admin2_codes (
 
 -- Create syntax for TABLE continentinfo
 CREATE TABLE geonames.continentinfo (
+    continent_code char(2),
     geonameid int,
-    continent text
+    name text
 );
 
 -- Create syntax for TABLE iso_language_codes
 CREATE TABLE geonames.iso_language_codes (
-    iso6393 text,
-    iso6392 text,
-    iso6391 text,
-    languagename text
+    iso_639_3 text,
+    iso_639_2 text,
+    iso_639_1 text,
+    language_name text
 );
 
 -- Create syntax for TABLE feature_codes

@@ -2,3 +2,5 @@
 %project=geonames
 %uri=https://github.com/cioionut/geonames-postgres
 
+appschema 2022-11-29T12:20:51Z Ionut Cio <ionut@ionkom.com> # Add geonames schema
+add_postgis_ext 2022-11-29T13:20:42Z Ionut Cio <ionut@ionkom.com> # Add postgis extension

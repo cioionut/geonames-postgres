@@ -10,10 +10,6 @@ ALTER TABLE ONLY geonames.countryinfo
     DROP CONSTRAINT pk_iso_alpha2,
     DROP CONSTRAINT fk_geonameid;
 
-ALTER TABLE ONLY geonames.admin1_codes_ascii
-    DROP CONSTRAINT pk_admin1code,
-    DROP CONSTRAINT fk_geonameid;
-
 ALTER TABLE ONLY geonames.admin2_codes
     DROP CONSTRAINT pk_admin2code,
     DROP CONSTRAINT fk_geonameid;
@@ -34,6 +30,10 @@ ALTER TABLE ONLY geonames.feature_codes
 
 -- geoname
 ALTER TABLE ONLY geonames.geoname
+    DROP CONSTRAINT fk_admin1,
     DROP CONSTRAINT pk_geonameid;
+
+ALTER TABLE ONLY geonames.admin1_codes_ascii
+    DROP CONSTRAINT pk_admin1code;
 
 COMMIT;

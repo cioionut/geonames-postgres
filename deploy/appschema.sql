@@ -2,6 +2,6 @@
 
 BEGIN;
 
-CREATE SCHEMA geonames;
+CREATE SCHEMA IF NOT EXISTS :"schema";
 
 COMMIT;

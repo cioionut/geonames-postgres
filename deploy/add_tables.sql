@@ -1,9 +1,10 @@
 -- Deploy geonames:add_tables to pg
 
 BEGIN;
+SET search_path TO :"schema";
 
 -- Create syntax for TABLE geoname
-CREATE TABLE geonames.geoname (
+CREATE TABLE geoname (
     geonameid int,
     name text,
     asciiname text,
@@ -26,7 +27,7 @@ CREATE TABLE geonames.geoname (
 );
 
 -- Create syntax for TABLE alternatename
-CREATE TABLE geonames.alternatename (
+CREATE TABLE alternatename (
     alternatenameid int,
     geonameid int,
     isolanguage text,
@@ -38,7 +39,7 @@ CREATE TABLE geonames.alternatename (
 );
 
 -- Create syntax for TABLE countryinfo
-CREATE TABLE geonames.countryinfo (
+CREATE TABLE countryinfo (
     iso_alpha2 char(2),
     iso_alpha3 char(3),
     iso_numeric integer,
@@ -61,14 +62,14 @@ CREATE TABLE geonames.countryinfo (
 );
 
 -- Create syntax for TABLE hierarchy
-CREATE TABLE geonames.hierarchy (
+CREATE TABLE hierarchy (
     parentid int,
     childid int,
     type text
 );
 
 -- Create syntax for TABLE admin1_codes_ascii
-CREATE TABLE geonames.admin1_codes_ascii (
+CREATE TABLE admin1_codes_ascii (
     admin1 text,
     name text,
     asciiname text,
@@ -76,7 +77,7 @@ CREATE TABLE geonames.admin1_codes_ascii (
 );
 
 -- Create syntax for TABLE admin2_codes
-CREATE TABLE geonames.admin2_codes (
+CREATE TABLE admin2_codes (
     admin2 text,
     name text,
     asciiname text,
@@ -84,14 +85,14 @@ CREATE TABLE geonames.admin2_codes (
 );
 
 -- Create syntax for TABLE continentinfo
-CREATE TABLE geonames.continentinfo (
+CREATE TABLE continentinfo (
     continent_code char(2),
     geonameid int,
     name text
 );
 
 -- Create syntax for TABLE iso_language_codes
-CREATE TABLE geonames.iso_language_codes (
+CREATE TABLE iso_language_codes (
     iso_639_3 text,
     iso_639_2 text,
     iso_639_1 text,
@@ -99,7 +100,7 @@ CREATE TABLE geonames.iso_language_codes (
 );
 
 -- Create syntax for TABLE feature_codes
-CREATE TABLE geonames.feature_codes (
+CREATE TABLE feature_codes (
     fclass char(1),
     fcode text,
     name text,
@@ -107,7 +108,7 @@ CREATE TABLE geonames.feature_codes (
 );
 
 -- Create syntax for TABLE time_zones
-CREATE TABLE geonames.time_zones (
+CREATE TABLE time_zones (
   country varchar(2),
   time_zone_id text,
   GMT_offset NUMERIC(3,1),
@@ -116,7 +117,7 @@ CREATE TABLE geonames.time_zones (
 );
 
 -- Create syntax for TABLE postal_codes
-CREATE TABLE geonames.postal_codes (
+CREATE TABLE postal_codes (
   country varchar(2),
   postal_code text,
   name text,

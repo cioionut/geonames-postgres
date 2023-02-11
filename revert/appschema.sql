@@ -2,6 +2,6 @@
 
 BEGIN;
 
-DROP SCHEMA geonames;
+DROP SCHEMA IF EXISTS :"schema";
 
 COMMIT;

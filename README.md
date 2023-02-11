@@ -22,6 +22,7 @@
 - https://sqitch.org/docs/manual/sqitchtutorial/
 
 # Inspiration
+- https://github.com/cioionut/geonames_pg_import
 - https://event.ifi.uni-heidelberg.de/wp-content/uploads/2017/03/geonames_installation.pdf
 - https://github.com/swidz/GeoNames-PostgreSQL-DataImport
 

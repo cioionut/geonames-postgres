@@ -2,7 +2,10 @@
 
 BEGIN;
 
-SELECT the_geom from geonames.geoname
+SET search_path TO :"schema";
+
+
+SELECT the_geom from geoname
 WHERE FALSE;
 
 ROLLBACK;

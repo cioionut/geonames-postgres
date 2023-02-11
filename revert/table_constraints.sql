@@ -2,38 +2,54 @@
 
 BEGIN;
 
-ALTER TABLE ONLY geonames.alternatename
-    DROP CONSTRAINT pk_alternatenameid,
-    DROP CONSTRAINT fk_geonameid;
+SET search_path TO :"schema";
 
-ALTER TABLE ONLY geonames.countryinfo
+DROP INDEX index_alternate_names_geoname_id;
+ALTER TABLE ONLY alternate_names
+    DROP CONSTRAINT pk_alternate_name_id,
+    DROP CONSTRAINT fk_alternate_names_geoname_id;
+
+DROP INDEX index_country_info_geoname_id;
+ALTER TABLE ONLY country_info
     DROP CONSTRAINT pk_iso_alpha2,
-    DROP CONSTRAINT fk_geonameid;
+    DROP CONSTRAINT fk_country_info_geoname_id,
+    DROP COLUMN flag;
 
-ALTER TABLE ONLY geonames.admin2_codes
-    DROP CONSTRAINT pk_admin2code,
-    DROP CONSTRAINT fk_geonameid;
+DROP INDEX index_admin1_codes_geoname_id;
+ALTER TABLE ONLY admin1_codes
+    DROP CONSTRAINT pk_admin1_code,
+    DROP CONSTRAINT fk_admin1_codes_geoname_id;
 
-ALTER TABLE ONLY geonames.hierarchy
-    DROP CONSTRAINT fk_geonameid_parent,
-    DROP CONSTRAINT fk_geonameid_child;
+DROP INDEX index_admin2_codes_geoname_id;
+ALTER TABLE ONLY admin2_codes
+    DROP CONSTRAINT pk_admin2_code,
+    DROP CONSTRAINT fk_admin2_codes_geoname_id;
 
-ALTER TABLE ONLY geonames.continentinfo
-    DROP CONSTRAINT pk_continent,
-    DROP CONSTRAINT fk_geonameid;
+ALTER TABLE ONLY admin5_codes
+    DROP CONSTRAINT pk_admin5_geoname_id,
+    DROP CONSTRAINT fk_admin5_codes_geoname_id;
 
-ALTER TABLE ONLY geonames.iso_language_codes
-    DROP CONSTRAINT pk_languagename;
+ALTER TABLE ONLY hierarchy
+    DROP CONSTRAINT fk_hierarchy_geoname_parent_id,
+    DROP CONSTRAINT fk_hierarchy_geoname_child_id;
 
-ALTER TABLE ONLY geonames.feature_codes
-    DROP CONSTRAINT pk_featurecode;
+ALTER TABLE ONLY continent_codes
+    DROP CONSTRAINT pk_continent_code;
+
+-- ALTER TABLE ONLY iso_language_codes
+--     DROP CONSTRAINT pk_languagename;
+
+ALTER TABLE ONLY feature_codes
+    DROP CONSTRAINT pk_feature_code;
+
+ALTER TABLE ONLY postal_codes
+    DROP CONSTRAINT pk_postal_code;
+
+ALTER TABLE time_zones
+    DROP CONSTRAINT pk_time_zone_id;
 
 -- geoname
-ALTER TABLE ONLY geonames.geoname
-    DROP CONSTRAINT fk_admin1,
-    DROP CONSTRAINT pk_geonameid;
-
-ALTER TABLE ONLY geonames.admin1_codes_ascii
-    DROP CONSTRAINT pk_admin1code;
+ALTER TABLE ONLY geoname
+    DROP CONSTRAINT pk_geoname_id;
 
 COMMIT;

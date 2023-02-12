@@ -5,6 +5,6 @@ BEGIN;
 SET search_path TO :"schema";
 
 ALTER TABLE ONLY hierarchy
-    DROP COLUMMN id;
+    DROP COLUMN id;
 
 COMMIT;

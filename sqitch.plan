@@ -8,3 +8,4 @@ add_tables 2022-11-29T13:47:35Z Ionut Cio <ionut@ionkom.com> # Add tables
 table_constraints 2022-11-30T18:28:12Z Ionut Cio <ionut@ionkom.com> # Add Primary and Foreign Key Constraints
 geo_column 2022-11-30T19:47:29Z Ionut Cio <ionut@ionkom.com> # Add geometry column
 add_pk_hierarchy 2023-02-12T11:28:48Z Ionut Cio <ionut@ionkom.com> # Add primary key for hierarchy
+add_admin1_fk 2023-02-12T18:07:01Z Ionut Cio <ionut@ionkom.com> # Add admin1 fk to geoname

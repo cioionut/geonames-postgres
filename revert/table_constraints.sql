@@ -29,6 +29,8 @@ ALTER TABLE ONLY admin5_codes
     DROP CONSTRAINT pk_admin5_geoname_id,
     DROP CONSTRAINT fk_admin5_codes_geoname_id;
 
+DROP INDEX index_hierarchy_parent_id;
+DROP INDEX index_hierarchy_child_id;
 ALTER TABLE ONLY hierarchy
     DROP CONSTRAINT fk_hierarchy_geoname_parent_id,
     DROP CONSTRAINT fk_hierarchy_geoname_child_id;

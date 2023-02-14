@@ -2,8 +2,6 @@
 
 BEGIN;
 
-SET search_path TO :"schema";
-
 DROP EXTENSION "postgis";
 
 COMMIT;

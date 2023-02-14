@@ -2,7 +2,7 @@
 
 BEGIN;
 
-SET search_path TO :"schema";
+SET search_path TO :"schema",public;
 
 -- needs pg_trgm extension
 -- see https://github.com/PostgresApp/PostgresApp/issues/335#issuecomment-304163489

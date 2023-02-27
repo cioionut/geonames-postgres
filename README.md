@@ -31,3 +31,13 @@
 
 # sqitch commands
 - `sqitch deploy table_constraints`
+
+
+# DEBUG
+## Spot not present foreign key in the admin1_codes table
+```sql
+SELECT distinct g.admin1 FROM public.geoname g
+left join public.admin1_codes ac on g.country || '.' || g.admin1 = ac.code
+where 
+country = 'GB' and (g.admin1 != '00') and ac.code is NULL
+```

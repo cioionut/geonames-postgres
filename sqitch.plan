@@ -5,7 +5,8 @@
 0_appschema 2022-11-29T12:20:51Z Ionut Cio <ionut@ionkom.com> # Add geonames schema
 1_add_postgis_ext 2022-11-29T13:20:42Z Ionut Cio <ionut@ionkom.com> # Add postgis extension
 2_add_tables 2022-11-29T13:47:35Z Ionut Cio <ionut@ionkom.com> # Add tables
+3_0_rm_nonexist_refs 2023-03-06T14:09:04Z Ionut Cio <ionut@ionkom.com> # Remove nonexistent references
 3_table_constraints 2022-11-30T18:28:12Z Ionut Cio <ionut@ionkom.com> # Add Primary and Foreign Key Constraints
-4_geo_column 2022-11-30T19:47:29Z Ionut Cio <ionut@ionkom.com> # Add geometry column
+# 4_geo_column 2022-11-30T19:47:29Z Ionut Cio <ionut@ionkom.com> # Add geometry column
 5_add_pk_hierarchy 2023-02-12T11:28:48Z Ionut Cio <ionut@ionkom.com> # Add primary key for hierarchy
 6_add_admin1_fk 2023-02-12T18:07:01Z Ionut Cio <ionut@ionkom.com> # Add admin1 fk to geoname

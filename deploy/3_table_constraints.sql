@@ -4,18 +4,6 @@ BEGIN;
 
 SET search_path TO :"schema";
 
--- remove duplicates
-
-DELETE FROM postal_codes p1 USING postal_codes p2
-WHERE p1.ctid > p2.ctid
-  AND p2.country_code = p1.country_code
-  AND p2.postal_code = p1.postal_code
-  AND p2.place_name = p1.place_name;
-
-DELETE FROM postal_codes
-WHERE place_name is null;
-
-
 -- primary keys
 
 ALTER TABLE geoname

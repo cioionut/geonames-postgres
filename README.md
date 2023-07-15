@@ -1,11 +1,8 @@
 # How do deploy
-1. Edit `./geonames_importer.sh` from geonames postgres importer project
-2. Run `./geonames_importer.sh -a download-data`
-3. `sqitch deploy add_tables`
-4. Run `./geonames_importer.sh -a import-dumps`
-5. Run `./geonames_importer.sh -a fix-entries`
-6. [Optional] Run `./geonames_importer.sh -a delete-entries` if a subset of countries was initially imported
-7. `sqitch deploy table_constraints`
+1. Run `./import.sh -g` from `geonames_pg_import` to download the geonames data
+2. `sqitch deploy 2_add_tables`
+3. Run `./import.sh -i` from `geonames_pg_import`
+4. `sqitch deploy 6_add_admin1_fk`
 
 
 ## Setup .pgpass file

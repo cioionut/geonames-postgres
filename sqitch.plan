@@ -10,3 +10,4 @@
 4_geo_column 2022-11-30T19:47:29Z Ionut Cio <ionut@ionkom.com> # Add geometry column
 5_add_pk_hierarchy 2023-02-12T11:28:48Z Ionut Cio <ionut@ionkom.com> # Add primary key for hierarchy
 6_add_admin1_fk 2023-02-12T18:07:01Z Ionut Cio <ionut@ionkom.com> # Add admin1 fk to geoname
+7_add_country_fk 2023-11-19T11:00:37Z Ionut Cio <ionut@ionkom.com> # Add country foreign key

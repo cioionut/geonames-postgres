@@ -2,7 +2,7 @@
 1. Run `./import.sh -g` from `geonames_pg_import` to download the geonames data
 2. `sqitch deploy 2_add_tables`
 3. Run `./import.sh -i` from `geonames_pg_import`
-4. `sqitch deploy 6_add_admin1_fk`
+4. `sqitch deploy 7_add_country_fk`
 
 
 ## Setup .pgpass file

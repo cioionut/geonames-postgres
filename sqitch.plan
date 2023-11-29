@@ -11,3 +11,4 @@
 5_add_pk_hierarchy 2023-02-12T11:28:48Z Ionut Cio <ionut@ionkom.com> # Add primary key for hierarchy
 6_add_admin1_fk 2023-02-12T18:07:01Z Ionut Cio <ionut@ionkom.com> # Add admin1 fk to geoname
 7_add_country_fk 2023-11-19T11:00:37Z Ionut Cio <ionut@ionkom.com> # Add country foreign key
+8_add_admin1_idx 2023-11-29T21:31:27Z Ionut Cio <ionut@ionkom.com> # Add admin1_code_ref index

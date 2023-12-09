@@ -6,7 +6,7 @@ SET search_path TO :"schema";
 
 -- add column
 ALTER TABLE geoname
-    ADD COLUMN admin1_code_ref CHAR(20);
+    ADD COLUMN admin1_code_ref TEXT;
 
 
 -- build admin1 code column

@@ -11,6 +11,8 @@
 
 # Sqitch
 
+`sqitch add appschema -n 'Add schema for all flipr objects.'`
+
 ## Manage Secrets
 - https://github.com/sqitchers/sqitch/blob/develop/lib/sqitch-passwords.pod
 - https://metacpan.org/pod/sqitch-authentication

@@ -12,3 +12,5 @@
 6_add_admin1_fk 2023-02-12T18:07:01Z Ionut Cio <ionut@ionkom.com> # Add admin1 fk to geoname
 7_add_country_fk 2023-11-19T11:00:37Z Ionut Cio <ionut@ionkom.com> # Add country foreign key
 8_add_admin1_idx 2023-11-29T21:31:27Z Ionut Cio <ionut@ionkom.com> # Add admin1_code_ref index
+9_add_admin2_fk 2023-12-09T15:03:14Z Ionut Cio <ionut@ionkom.com> # Add admin2 fk to geoname
+10_add_admin2_idx 2023-12-09T18:33:52Z Ionut Cio <ionut@ionkom.com> # Add admin2_code_ref index

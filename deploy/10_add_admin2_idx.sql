@@ -26,3 +26,7 @@ CREATE INDEX idx_admin2_code_ref
 ON geoname(admin2_code_ref);
 
 COMMIT;
+
+-- release the space
+-- https://stackoverflow.com/questions/24607548/database-size-doubles-on-update-to-single-new-column
+VACUUM FULL geoname;

@@ -33,3 +33,7 @@ ALTER TABLE ONLY geoname
 
 
 COMMIT;
+
+-- release the space
+-- https://stackoverflow.com/questions/24607548/database-size-doubles-on-update-to-single-new-column
+VACUUM FULL geoname;

@@ -6,7 +6,7 @@ SET search_path TO :"schema";
 
 -- add constraint
 ALTER TABLE ONLY geoname
-    ADD CONSTRAINT fk_geonames_contry FOREIGN KEY (country) REFERENCES country_info(iso_alpha2);
+    ADD CONSTRAINT fk_geonames_country FOREIGN KEY (country) REFERENCES country_info(iso_alpha2);
 
 
 COMMIT;

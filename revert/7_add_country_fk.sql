@@ -4,6 +4,6 @@ BEGIN;
 
 -- drop fk
 ALTER TABLE ONLY geoname
-    DROP CONSTRAINT fk_geonames_contry;
+    DROP CONSTRAINT fk_geonames_country;
 
 COMMIT;

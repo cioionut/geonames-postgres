@@ -9,8 +9,17 @@
 - https://www.postgresql.org/docs/current/libpq-pgpass.html
 - https://tableplus.com/blog/2019/09/how-to-use-pgpass-in-postgresql.html
 
+```bash
+echo "localhost:5432:mydb:myuser:mypassword" >> ~/.pgpass
+chmod 0600 ~/.pgpass
+```
+
 # Sqitch
 
+## Install Sqitch
+- https://sqitch.org/download/docker/
+
+## Sqitch Commands
 `sqitch add appschema -n 'Add schema for all flipr objects.'`
 
 ## Manage Secrets

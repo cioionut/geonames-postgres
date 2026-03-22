@@ -1,9 +1,16 @@
 # How do deploy
-1. Run `./import.sh -g` from `geonames_pg_import` to download the geonames data
-2. `./sqitch deploy 2_add_tables`
-3. Run `./import.sh -i` from `geonames_pg_import`
-4. `./sqitch deploy 10_add_admin2_idx`
-
+```bash
+# 1. Run `./import.sh -g` from `geonames_pg_import` to download the geonames data
+# cd ../../geonames/geonames_pg_import
+./import.sh -g
+# 2. Create raw tables
+./sqitch deploy 2_add_tables
+# 3. Run `./import.sh -i` from `geonames_pg_import`
+# cd ../../geonames/geonames_pg_import
+./import.sh -i
+# ./sqitch deploy 10_add_admin2_idx
+./sqitch deploy
+```
 
 ## Setup .pgpass file
 - https://www.postgresql.org/docs/current/libpq-pgpass.html

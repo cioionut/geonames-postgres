@@ -67,4 +67,10 @@ WHERE p1.ctid > p2.ctid
 DELETE FROM postal_codes
 WHERE place_name is null;
 
+-- REMOVE DUPLICATES FROM GEONAME (Fixes the PK Error)
+-- Keep the record with the lowest ctid for every id
+DELETE FROM geoname g1 USING geoname g2
+WHERE g1.ctid > g2.ctid
+  AND g1.id = g2.id;
+
 COMMIT;
